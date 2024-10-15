@@ -1,11 +1,13 @@
 var express = require('express');
-app = express();
+var app = express();
+var response;
 
 app.get('/', function (req, res) {
-  res.send('Hello World!\n');
-});
+      response = 'This is version 1 of the app.' + '\n';
+          res.send(response);
+          });
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
-});
+          var server = app.listen(process.env.PORT || 8080, function () {
+                console.log('App is running on port ' + server.address().port);
+          });
 
